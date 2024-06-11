@@ -1,3 +1,6 @@
+import sys
+
+
 def count_vowels(str):
     counter = 0
     vowels = ["a", "e", "i", "o", "u"]
@@ -9,4 +12,8 @@ def count_vowels(str):
 
 
 if __name__ == "__main__":
-    print(count_vowels("Eelebration"))
+    if len(sys.argv) > 1:
+        word = sys.argv[1]
+        print(f"Number of vowels: {count_vowels(word)}")
+    else:
+        print("No word was provided.")
